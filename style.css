@@ -334,6 +334,9 @@ h1 {
   .header {
     font-size: 30px;
   }
+  .header > h1:nth-child(3) {
+    font-size: 38px;
+  }
   .right > p {
     width: 80%;
   }
