@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+SC&family=Poppins:wght@200;300;400;500&display=swap');
+/******* GLOBAL *******/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+body {
+  font-family: 'Alegreya SC', serif;
+}
+section {
+  padding: 40px 0px;
+}
+section.hero__container {
+  padding: 0;
+}
+.max-width {
+  padding: 0px 40px;
+}
+/********* SCROLL BTN STYLES **********/
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: white;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: black;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover {
+  filter: brightness(90%);
+}
+/******* NAVBAR *******/
+.navbar {
+  position: absolute;
+  width: 100vw;
+  padding: 30px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar .menu {
+  width: 50vw;
+  text-align: center;
+}
+.navbar .menu li {
+  padding: 0 40px;
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a {
+  color: black;
+  font-size: 18px;
+}
+.menu-btn {
+  font-size: 23;
+  cursor: pointer;
+  display: none;
+  color: black;
+}
+/******** HERO ********/
+.hero__container {
+  display: flex;
+}
+.left {
+  height: 100vh;
+  width: 48vw;
+}
+.right {
+  height: 100vh;
+  width: 50vw;
+  font-family: 'Alegreya SC', serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+img.hero-image {
+  height: 100%;
+  width: 48vw;
+  object-fit: cover;
+}
+.header {
+  text-align: center;
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+.right > p {
+  text-align: justify;
+  width: 70%;
+}
+/************* GALLERY **************/
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.wrapper > img {
+  height: 400px;
+  width: 280px;
+  object-fit: cover;
+  filter: saturate(0);
+}
+.wrapper > img:hover {
+  filter: saturate(1);
+  transform: scale(1.01);
+  transition: 0.4s ease;
+}
+/********** ARTIST CONTAINER ************/
+.artist {
+  width: 300px;
+}
+.owl-carousel .owl-item img {
+  width: 300px !important;
+  height: 400px;
+  object-fit: cover;
+  filter: saturate(0);
+}
+.owl-carousel .owl-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.owl-carousel .owl-item img:hover {
+  filter: saturate(1);
+  border: 3px rgb(180, 171, 149) solid;
+}
+.artist > P,
+.artist > h2 {
+  padding-top: 20px;
+}
+/******** CONTACT CONTAINER *********/
+.contact__container {
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.contact-info {
+  padding: 40px 30px;
+  color: white;
+}
+.contact-info > p {
+  padding-bottom: 10px;
+}
+.bold {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+p,
+h1 {
+  background: none;
+}
+.contact-info:nth-child(1) {
+  flex: 30%;
+  background-image: url(assets/contact.webp);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+}
+.contact-info:nth-child(2) {
+  flex: 35%;
+  background-color: rgb(180, 171, 149);
+}
+.contact-info:nth-child(3) {
+  flex: 25%;
+  padding: 0;
+}
+.contact-info h1 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.contact-info h1.message {
+  color: #000;
+}
+.contact-info p.bold {
+  font-size: 28px;
+  font-weight: 200;
+}
+.contact-info p.bold i {
+  font-size: 14px;
+  width: 35px;
+  height: 35px;
+  font-weight: 900;
+  margin-right: 10px;
+  border-radius: 50px;
+  line-height: 35px;
+  text-align: center;
+  background-color: rgb(180, 171, 149);
+}
+.contact-info ul {
+  padding: 0;
+  margin: 0;
+}
+.contact-info ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+.contact-info ul li a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+}
+.contact-info ul li a i {
+  font-size: 14px;
+  line-height: 30px;
+  color: #000;
+}
+.contact-info form {
+  width: 100%;
+  height: auto;
+}
+.contact-info-input {
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  outline: none;
+  padding-left: 5px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 300;
+}
+.contact-info-input::placeholder,
+.contact-info-textarea::placeholder {
+  color: black;
+}
+.contact-info-textarea {
+  width: 100%;
+  height: 140px;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  outline: none;
+  padding-left: 5px;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 300;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+.contact-info-btn {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid black;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.contact-info iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: invert(95%) brightness(0.9) saturate(0);
+}
+.contact-info iframe:hover {
+  filter: saturate(1);
+}
+/**************** MEDIA QUERIES ****************/
+@media (max-width: 1200px) {
+  .navbar .menu li {
+    padding: 0 30px;
+  }
+  .max-width {
+    margin: auto;
+  }
+}
+@media (max-width: 996px) {
+  .menu-btn {
+    display: block;
+    z-index: 999;
+  }
+  .menu-btn i.active:before {
+    content: '\f00d';
+  }
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    text-align: center;
+    padding-top: 80px;
+    transition: all 0.3s ease;
+    z-index: 10;
+    background-color: white;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  ul.menu.active {
+    padding-top: 200px;
+  }
+  .navbar .menu li {
+    display: block;
+    padding: 30px;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+}
+@media (max-width: 510px) {
+  .header {
+    font-size: 30px;
+  }
+  .right > p {
+    width: 80%;
+  }
+}
+@media (max-width: 380px) {
+  .header {
+    font-size: 20px;
+  }
+  .right > p {
+    font-size: 14px;
+  }
+  .owl-carousel .owl-item img {
+    width: 100% !important;
+  }
+  .contact-info:nth-child(2) {
+    flex: 100%;
+  }
+  .contact-info:nth-child(3) {
+    height: 400px;
+  }
+}
